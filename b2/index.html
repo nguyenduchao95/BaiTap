@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất</title>
+</head>
+<body>
+
+<script>
+  let num1 = parseInt(prompt('Nhập số thứ 1:'));
+  let num2 = parseInt(prompt('Nhập số thứ 2:'));
+  let num3 = parseInt(prompt('Nhập số thứ 3:'));
+
+  //Cách 1
+  let max1 = num1;
+  if(max1 < num2) max1 = num2;
+  if(max1 < num3) max1 = num3;
+  alert('Số lớn nhất là: ' + max1);
+
+  //Cách 2
+  let max2 = Math.max(num1, num2, num3);
+  alert('Số lớn nhất là: ' + max2);
+</script>
+</body>
+</html>

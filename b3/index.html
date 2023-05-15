@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        label {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+
+        .btn {
+            margin: 20px 100px;
+        }
+
+        button {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <label for="input">Nhập số</label>
+    <input id="input" type="text">
+</div>
+
+<div class="btn">
+    <button value="/">/2</button>
+    <button value="x">x2</button>
+</div>
+
+<script>
+    let input = document.querySelector('#input');
+    let btns = document.querySelectorAll('button');
+    btns.forEach(function (btn) {
+        btn.onclick = function () {
+            let val = parseFloat(input.value);
+            if (!isNaN(val)) {
+                input.value = this.value == '/' ? val / 2 : val * 2;
+            }
+        }
+    })
+</script>
+</body>
+</html>
